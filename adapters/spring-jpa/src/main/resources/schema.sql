@@ -1,4 +1,4 @@
-CREATE TABLE merchant
+CREATE TABLE IF NOT EXISTS merchant
 (
     id SERIAL,
     birthdate timestamp without time zone,
@@ -8,7 +8,7 @@ CREATE TABLE merchant
     CONSTRAINT merchant_pkey PRIMARY KEY (id)
 );
 
-CREATE TABLE product
+CREATE TABLE IF NOT EXISTS product
 (
     id SERIAL,
     create_date timestamp without time zone,
@@ -19,7 +19,7 @@ CREATE TABLE product
     CONSTRAINT product_pkey PRIMARY KEY (id)
 );
 
-CREATE TABLE address
+CREATE TABLE IF NOT EXISTS address
 (
     id SERIAL,
     "number" integer NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE address
         ON DELETE NO ACTION
 );
 
-CREATE TABLE merchant_product
+CREATE TABLE IF NOT EXISTS merchant_product
 (
     associated_date timestamp without time zone,
     merchant_id integer NOT NULL,
