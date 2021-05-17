@@ -1,0 +1,1 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:createProductResponse xmlns:ns2="http://service.cxf.example.com/"><return><id>1</id><createDate>2021-05-13T22:00:00Z</createDate><label>test</label><unitPrice>45.99</unitPrice><weight>10.0</weight><height>10.0</height></return></ns2:createProductResponse></soap:Body></soap:Envelope>

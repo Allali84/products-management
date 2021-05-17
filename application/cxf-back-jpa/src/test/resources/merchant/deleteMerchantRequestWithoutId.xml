@@ -1,0 +1,18 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.cxf.example.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:deleteMerchant>
+            <!--Optional:-->
+            <arg0>
+                <!--Optional:-->
+                <createDate>2021-05-14</createDate>
+                <!--Optional:-->
+                <name>test 2</name>
+                <!--Optional:-->
+                <lastname>test 2</lastname>
+                <!--Optional:-->
+                <birthdate>1984-09-24</birthdate>
+            </arg0>
+        </ser:deleteMerchant>
+    </soapenv:Body>
+</soapenv:Envelope>

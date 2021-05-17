@@ -1,0 +1,13 @@
+<ser:deleteMerchantRequest xmlns:ser="http://example.com/gs-producing-web-service">
+    <!--Optional:-->
+    <ser:merchant>
+        <!--Optional:-->
+        <ser:createDate>2021-05-14T00:00:00Z</ser:createDate>
+        <!--Optional:-->
+        <ser:name>test</ser:name>
+        <!--Optional:-->
+        <ser:lastName>test 2</ser:lastName>
+        <!--Optional:-->
+        <ser:birthdate>1984-09-24</ser:birthdate>
+    </ser:merchant>
+</ser:deleteMerchantRequest>

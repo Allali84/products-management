@@ -1,0 +1,1 @@
+<ns2:updateProductResponse xmlns:ns2="http://example.com/gs-producing-web-service"><ns2:product><ns2:id>1</ns2:id><ns2:createDate>2021-05-14T00:00:00Z</ns2:createDate><ns2:label>test 2</ns2:label><ns2:unitPrice>55.99</ns2:unitPrice><ns2:currency>0.0</ns2:currency><ns2:weight>10.0</ns2:weight><ns2:height>10.0</ns2:height></ns2:product></ns2:updateProductResponse>

@@ -1,0 +1,1 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:updateMerchantResponse xmlns:ns2="http://service.cxf.example.com/"><return><id>1</id><createDate>2021-05-13T22:00:00Z</createDate><name>test 2</name><lastname>test 2</lastname><birthdate>1984-09-24T00:00:00+02:00</birthdate></return></ns2:updateMerchantResponse></soap:Body></soap:Envelope>

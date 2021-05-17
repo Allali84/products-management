@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.cxf.example.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:createProduct>
+            <!--Optional:-->
+            <arg0>
+                <!--Optional:-->
+                <id>1</id>
+                <!--Optional:-->
+                <createDate>2021-05-14</createDate>
+                <!--Optional:-->
+                <label>test</label>
+                <!--Optional:-->
+                <weight>12.5</weight>
+                <!--Optional:-->
+                <height>10.0</height>
+                <!--Optional:-->
+                <unitPrice>45.99</unitPrice>
+            </arg0>
+        </ser:createProduct>
+    </soapenv:Body>
+</soapenv:Envelope>

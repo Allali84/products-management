@@ -1,0 +1,17 @@
+<ser:createProductRequest xmlns:ser="http://example.com/gs-producing-web-service">
+    <!--Optional:-->
+    <ser:product>
+        <!--Optional:-->
+        <ser:id>1</ser:id>
+        <!--Optional:-->
+        <ser:createDate>2021-05-14T00:00:00Z</ser:createDate>
+        <!--Optional:-->
+        <ser:label>test</ser:label>
+        <!--Optional:-->
+        <ser:weight>12.0</ser:weight>
+        <!--Optional:-->
+        <ser:height>10.0</ser:height>
+        <!--Optional:-->
+        <ser:unitPrice>45.99</ser:unitPrice>
+    </ser:product>
+</ser:createProductRequest>

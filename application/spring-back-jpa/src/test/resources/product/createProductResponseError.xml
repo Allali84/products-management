@@ -1,0 +1,1 @@
+<SOAP-ENV:Fault xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><faultcode>SOAP-ENV:Server</faultcode><faultstring xml:lang="en">The product with id : 1 already exist</faultstring></SOAP-ENV:Fault>

@@ -1,0 +1,1 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:deleteProductResponse xmlns:ns2="http://service.cxf.example.com/"><return>Product has been deleted with success</return></ns2:deleteProductResponse></soap:Body></soap:Envelope>

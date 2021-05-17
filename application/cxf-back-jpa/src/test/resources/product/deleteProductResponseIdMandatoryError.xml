@@ -1,0 +1,1 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Server</faultcode><faultstring>The field Id of Product Entity is mandatory</faultstring></soap:Fault></soap:Body></soap:Envelope>

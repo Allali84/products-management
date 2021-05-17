@@ -1,0 +1,1 @@
+<ns2:deleteProductResponse xmlns:ns2="http://example.com/gs-producing-web-service"><ns2:message>Product has been deleted with success</ns2:message></ns2:deleteProductResponse>
