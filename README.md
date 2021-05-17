@@ -26,6 +26,7 @@
     - Apache Maven 3.8.1
     - a good IDE
     - Tomcat 9
+    - PostgreSQL
 
 # Tomcat
 After installing tomcat you need to follow this steps :
@@ -50,6 +51,15 @@ After installing tomcat you need to follow this steps :
     </settings>
 
 ### If you must change the tomcat port, don't forget to change it in the POM of the 3 deployable modules
+
+### PostgreSQL Config
+
+I used this config, don't forget to change every properties files in the 3 deployable modules if you want choose another one
+
+    spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+    spring.datasource.username=postgres
+    spring.datasource.password=root
+
 
 # Run the modules
 ### clean and build the project
@@ -76,3 +86,7 @@ You can find the WSDL list here :
 - http://localhost:8080/spring-boot-soap/ws/poducts.wsdl
 - http://localhost:8080/spring-boot-soap/ws/merchants.wsdl
 - http://localhost:8080/spring-boot-soap/ws/merchantProduct.wsdl
+
+# TODO
+    - Clean the POMs files
+    - Add Comments to the code
