@@ -1,5 +1,7 @@
 package com.example.cxf;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UncheckedIOException;
+import java.util.TimeZone;
 
 import static io.restassured.RestAssured.given;
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -27,6 +30,16 @@ public class ProductServiceTests {
 
     @Autowired
     private ResourceLoader resourceLoader;
+
+    @BeforeEach
+    public void init() {
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Paris"));
+    }
+
+    @AfterEach
+    public void after() {
+        TimeZone.setDefault(TimeZone.getDefault());
+    }
 
     @Test
     public void createProduct_OK(){

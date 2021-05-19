@@ -2,6 +2,7 @@ package com.example.spring;
 
 import com.example.spring.config.JpaConfig;
 import com.example.spring.config.WebServiceConfig;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UncheckedIOException;
+import java.util.TimeZone;
 
 import static org.springframework.ws.test.server.RequestCreators.*;
 import static org.springframework.ws.test.server.ResponseMatchers.*;
@@ -45,8 +47,13 @@ public class ProductServiceTests {
     @BeforeEach
     public void init(){
         mockClient = MockWebServiceClient.createClient(applicationContext);
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Paris"));
     }
 
+    @AfterEach
+    public void after() {
+        TimeZone.setDefault(TimeZone.getDefault());
+    }
 
     @Test
     public void createProduct_OK() throws IOException  {

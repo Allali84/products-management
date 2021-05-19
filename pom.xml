@@ -15,11 +15,10 @@
 		<module>application/spring-back-hibernate</module>
 	</modules>
 	<groupId>com.example</groupId>
-	<artifactId>smile-and-pay-test-technique</artifactId>
+	<artifactId>products-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>smile-and-pay-test-technique</name>
-	<description>Test technique for Smile&amp;Pay</description>
+	<name>products-management</name>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>

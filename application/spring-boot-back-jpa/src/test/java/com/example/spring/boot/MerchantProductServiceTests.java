@@ -2,6 +2,8 @@ package com.example.spring.boot;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +21,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UncheckedIOException;
+import java.util.TimeZone;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.springframework.ws.test.server.RequestCreators.withPayload;
@@ -38,8 +41,14 @@ public class MerchantProductServiceTests {
     private Resource xsdSchema = new ClassPathResource("xsds/merchantProduct.xsd");
 
     @Before
-    public void init() throws IOException {
+    public void init() {
         mockClient = MockWebServiceClient.createClient(applicationContext);
+        TimeZone.setDefault(TimeZone.getTimeZone("Europe/Paris"));
+    }
+
+    @AfterEach
+    public void after() {
+        TimeZone.setDefault(TimeZone.getDefault());
     }
 
     @Test
