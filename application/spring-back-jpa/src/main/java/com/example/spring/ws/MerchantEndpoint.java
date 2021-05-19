@@ -1,7 +1,7 @@
 package com.example.spring.ws;
 
 import com.example.gs_producing_web_service.*;
-import com.example.spring.config.jpa.SpringConfig;
+import com.example.spring.config.jpa.SpringJpaConfig;
 import com.example.spring.mapper.MerchantMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -13,18 +13,18 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class MerchantEndpoint {
     private static final String NAMESPACE_URI = "http://example.com/gs-producing-web-service";
 
-    private SpringConfig springConfig;
+    private SpringJpaConfig springJpaConfig;
 
     @Autowired
-    public MerchantEndpoint(SpringConfig springConfig) {
-        this.springConfig = springConfig;
+    public MerchantEndpoint(SpringJpaConfig springJpaConfig) {
+        this.springJpaConfig = springJpaConfig;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getMerchantRequest")
     @ResponsePayload
     public GetMerchantResponse getMerchant(@RequestPayload GetMerchantRequest request) {
         GetMerchantResponse response = new GetMerchantResponse();
-        response.setMerchant(MerchantMapper.asMerchantDto(springConfig.findMerchantByName().process(request.getName())));
+        response.setMerchant(MerchantMapper.asMerchantDto(springJpaConfig.findMerchantByName().process(request.getName())));
         return response;
     }
 
@@ -32,7 +32,7 @@ public class MerchantEndpoint {
     @ResponsePayload
     public CreateMerchantResponse createMerchant(@RequestPayload CreateMerchantRequest request) {
         CreateMerchantResponse response = new CreateMerchantResponse();
-        response.setMerchant(MerchantMapper.asMerchantDto(springConfig.createMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()))));
+        response.setMerchant(MerchantMapper.asMerchantDto(springJpaConfig.createMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()))));
         return response;
     }
 
@@ -40,7 +40,7 @@ public class MerchantEndpoint {
     @ResponsePayload
     public UpdateMerchantResponse updateMerchant(@RequestPayload UpdateMerchantRequest request) {
         UpdateMerchantResponse response = new UpdateMerchantResponse();
-        response.setMerchant(MerchantMapper.asMerchantDto(springConfig.updateMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()))));
+        response.setMerchant(MerchantMapper.asMerchantDto(springJpaConfig.updateMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()))));
         return response;
     }
 
@@ -48,7 +48,7 @@ public class MerchantEndpoint {
     @ResponsePayload
     public DeleteMerchantResponse deleteMerchant(@RequestPayload DeleteMerchantRequest request) {
         DeleteMerchantResponse response = new DeleteMerchantResponse();
-        springConfig.deleteMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()));
+        springJpaConfig.deleteMerchant().process(MerchantMapper.asMerchantEntity(request.getMerchant()));
         response.setMessage("Merchant has been deleted with success");
         return response;
     }

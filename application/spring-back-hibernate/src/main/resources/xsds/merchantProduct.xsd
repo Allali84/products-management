@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/gs-producing-web-service"
+           targetNamespace="http://example.com/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="products.xsd" />
+    <xs:include schemaLocation="merchants.xsd" />
+
+    <xs:element name="associateMerchantProductRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="associateMerchantProductResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

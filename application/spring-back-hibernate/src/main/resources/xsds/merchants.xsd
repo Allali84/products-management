@@ -1,0 +1,82 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/gs-producing-web-service"
+           targetNamespace="http://example.com/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="products.xsd" />
+    <xs:include schemaLocation="addresses.xsd" />
+
+    <xs:element name="getMerchantRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMerchantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createMerchantRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createMerchantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateMerchantRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateMerchantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteMerchantRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="merchant" type="tns:merchant"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteMerchantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="merchant">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="createDate" type="xs:dateTime"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="birthdate" type="xs:date"/>
+            <xs:element name="addresses" type="tns:address" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="products" type="tns:product" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

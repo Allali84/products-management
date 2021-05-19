@@ -8,14 +8,17 @@
     │
     |── Adapters                        # Retrieve and store data from and to a number of sources (database, 
     │   │                                        network devices, file system, 3rd parties, and so on.)
-    │   └── spring-jpa                  # Spring Data (ORM hibernate and PostgreSQL Databse)
+    │   ├── spring-jpa                  # Spring Data (ORM hibernate and PostgreSQL Databse)
+    │   └── spring-hibernate            # Spring hibernate (PostgreSQL Databse)
     │
     |── Config                          # The config folder thats put everything together
-    │   └── spring-config-jpa           # Configure the Spring JPA adapter (spring-jpa)
+    │   ├── spring-config-jpa           # Configure the Spring JPA adapter (spring-jpa)
+    │   └── spring-config-hibernate     # Configure the Spring JPA adapter (spring-hibernate)
     │
     └── application                     # The applications can be used as front (Web, Client, batch ...)
         ├── cxf-back-jpa                # Example SOAP with CXF and Spring Boot thats use the "spring-config-jpa" config
         ├── spring-back-jpa             # Example SOAP with Spring thats use the "spring-config-jpa" config
+        ├── spring-back-hibernate       # Example SOAP with Spring thats use the "spring-config-hibernate" config
         └── spring-boot-back-jpa        # Example SOAP with Spring Boot thats use the "spring-config-ws" config  
     
 # Clean architecture
@@ -78,6 +81,14 @@ You can find the WSDL list here :
 - http://localhost:8080/spring-soap/ws/poducts.wsdl
 - http://localhost:8080/spring-soap/ws/merchants.wsdl
 - http://localhost:8080/spring-soap/ws/merchantProduct.wsdl
+
+### Run the 'spring-back-hibernate' module
+* `mvn -pl application/spring-back-hibernate tomcat7:deploy`
+
+You can find the WSDL list here :
+- http://localhost:8080/spring-hibernate-soap/ws/poducts.wsdl
+- http://localhost:8080/spring-hibernate-soap/ws/merchants.wsdl
+- http://localhost:8080/spring-hibernate-soap/ws/merchantProduct.wsdl
 
 ### Run the 'spring-boot-back-jpa' module
 * `mvn -pl application/spring-boot-back-jpa tomcat7:deploy`

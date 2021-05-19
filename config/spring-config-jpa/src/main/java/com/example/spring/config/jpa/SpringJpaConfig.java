@@ -11,14 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SpringConfig {
+public class SpringJpaConfig {
 
     private MerchantRepositoryJpaImpl merchantRepositoryJpa;
     private ProductRepositoryJpaImpl productRepositoryJpa;
 
 
     @Autowired
-    public SpringConfig(MerchantRepositoryJpaImpl merchantRepositoryJpa, ProductRepositoryJpaImpl productRepositoryJpa) {
+    public SpringJpaConfig(MerchantRepositoryJpaImpl merchantRepositoryJpa, ProductRepositoryJpaImpl productRepositoryJpa) {
         this.merchantRepositoryJpa = merchantRepositoryJpa;
         this.productRepositoryJpa = productRepositoryJpa;
     }

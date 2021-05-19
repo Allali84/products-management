@@ -1,0 +1,11 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.com/gs-producing-web-service"
+           targetNamespace="http://example.com/gs-producing-web-service" elementFormDefault="qualified">
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"/>
+            <xs:element name="number" type="xs:int"/>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="zipcode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

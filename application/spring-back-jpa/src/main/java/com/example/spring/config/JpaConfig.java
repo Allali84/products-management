@@ -69,8 +69,8 @@ public class JpaConfig {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", environment.getProperty("spring.jpa.hibernate.ddl-auto"));
         properties.setProperty("hibernate.dialect", environment.getProperty("spring.jpa.database-platform"));
-        properties.setProperty("javax.persistence.schema-generation.database.action", "create");
-        properties.setProperty("javax.persistence.sql-load-script-source", "schema.sql");
+        properties.setProperty("javax.persistence.schema-generation.database.action", environment.getProperty("schema-generation.database.action"));
+        properties.setProperty("javax.persistence.sql-load-script-source", environment.getProperty("sql-load-script-source"));
         return properties;
     }
 }

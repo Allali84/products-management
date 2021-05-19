@@ -1,0 +1,1 @@
+<ns2:updateMerchantResponse xmlns:ns2="http://example.com/gs-producing-web-service"><ns2:merchant><ns2:id>1</ns2:id><ns2:createDate>2021-05-14T00:00:00Z</ns2:createDate><ns2:name>test</ns2:name><ns2:lastName>test 2</ns2:lastName><ns2:birthdate>1984-09-23Z</ns2:birthdate></ns2:merchant></ns2:updateMerchantResponse>
