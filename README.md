@@ -1,4 +1,4 @@
-# Product management project with clean architecture (JDK1.8)
+# Product management project (SOAP) with clean architecture (JDK1.8)
 
 # Project Architecture
     .
